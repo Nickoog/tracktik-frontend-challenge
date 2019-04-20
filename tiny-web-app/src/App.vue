@@ -1,12 +1,12 @@
 <template>
     <div id="app">
         <h3>{{title}}</h3>
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            With Bootstrap!
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+        <button 
+            class="btn btn-primary"
+            @click="fetchClients"
+        >
+            fetch clients
+        </button>
     </div>
 </template> 
 
@@ -16,6 +16,15 @@
         data() {
             return {
                 title: 'Tiny app'
+            }
+        },
+        methods: {
+            fetchClients() {
+                fetch('https://tracktik-frontend-challenge-jwidtarfww.now.sh/clients',{
+                    method: 'GET'
+                })
+                .then(res => res.json())
+                .then(json => console.log(json))
             }
         }
     }
