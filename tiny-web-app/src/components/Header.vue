@@ -17,26 +17,8 @@
         <Modal
             v-show="isModalVisible"
             @close="closeModal"
-
-        >
-            <template v-slot:header>
-                <div class="image-wrapper">
-                    <img :src="profil.avatar" alt="Avatar" class="rounded-circle"> 
-                </div>
-                <h1>My profile</h1>
-            </template>
-            <template v-slot:body>
-                <p>
-                    <strong>Name:</strong> {{ profil.givenName }}
-                </p>
-                <p>
-                    <strong>Email:</strong> {{ profil.email }}
-                </p>
-                <p>
-                    <strong>Username: </strong>{{ profil.username }}
-                </p>
-            </template>
-        </Modal>
+            :value = "profil"
+        />
     </header>
 </template>
 

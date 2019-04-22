@@ -3,24 +3,33 @@
         <div class="backdrop-modal">
             <div class="modal-box">
                 <header class="modal-header">
-                    <slot name="header"></slot>
+                    <div class="image-wrapper">
+                        <img :src="value.avatar" alt="Avatar" class="rounded-circle"> 
+                    </div>
+                    <h1 class="m-0">My profile</h1>
                     <button
                         type="button"
                         class="btn-close"
                         @click="close"
                     >
-                        x
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
                     </button>
                 </header>
                 <section class="modal-body">
-                    <slot name="body"></slot>
+                    <p>
+                        <strong>Name:</strong> {{ value.givenName }}
+                    </p>
+                    <p>
+                        <strong>Username: </strong>{{ value.username }}
+                    </p>
+                    <p>
+                        <strong>Email:</strong> {{ value.email }}
+                    </p>
                 </section>
                 <footer class="modal-footer">
-                    <slot name="footer">
-                    </slot>
                     <button
                         type="button"
-                        class="btn-green"
+                        class="btn btn-primary"
                         @click="close"
                     >
                     Close
@@ -34,6 +43,7 @@
 <script>
     export default {
         name: 'modal',
+        props: {value: Object},
         methods: {
             close() {
                 this.$emit('close');
