@@ -1,5 +1,5 @@
 <template>
-    <header class="header d-flex justify-content-between align-items-center p-3">
+    <header id="top" class="header d-flex justify-content-between align-items-center p-3">
         <i class="fa fa-bars" aria-hidden="true"></i>
         <h1> {{ title }} </h1> 
         <div class="profil-container d-flex align-items-center">

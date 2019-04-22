@@ -43,6 +43,9 @@
         >
             show more
         </button>
+        <a href="#top">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </a>
     </div>
 </template>
 
@@ -105,6 +108,7 @@
             onChange () {
                 let id = event.target.value;
                 this.sites = [];
+                this.page = 1;
                 this.clientId = id;
                 id ? this.getSitesByClientId(id, this.page, this.limit,this.sort) 
                 : this.getSites(this.page, this.limit) 
@@ -112,6 +116,7 @@
             sortSites () {
                 this.sort === "desc" ? this.sort = "asc" : this.sort = "desc";
                 this.sites = [];
+                this.page = 1;
                 this.clientId ? this.getSitesByClientId(this.clientId, this.page, this.limit,this.sort)
                 : this.getSites (this.page, this.limit, this.sort)
             },
@@ -123,6 +128,7 @@
                 .then(json => this.sites = json)
             },
             searchSites () {
+                this.page = 1;
                 this.getSearchSites(this.search)
             }
         },
