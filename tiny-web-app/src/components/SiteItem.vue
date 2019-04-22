@@ -2,24 +2,24 @@
     <div class="item-container d-flex justify-content-between align-items-center border p-3">
         <div class="left-section d-flex align-items-center">
             <div class="image-wrapper">
-                <img :src="site.images[0]" alt="Avatar" class="rounded-circle"> 
+                <img :src="value.images[0]" alt="Avatar" class="rounded-circle"> 
             </div>
             <div class="info-container">
                 <p>
-                    <strong>{{ site.title }}</strong>
+                    <strong>{{ value.title }}</strong>
                 </p>
                 <p>
-                    {{ site.address.street }}, 
-                    {{ site.address.city }} 
-                    {{ site.address.state }}
-                    {{ site.address.zipCode }}
+                    {{ value.address.street }}, 
+                    {{ value.address.city }} 
+                    {{ value.address.state }}
+                    {{ value.address.zipCode }}
                 </p>
                 <p> 
-                    {{ site.address.city }}
+                    {{ value.address.city }}
                 </p>
                 <p> 
-                    {{ site.contacts.main.firstName }} 
-                    {{ site.contacts.main.lastName }} 
+                    {{ value.contacts.main.firstName }} 
+                    {{ value.contacts.main.lastName }} 
                 </p>
             </div>
         </div>
@@ -34,7 +34,6 @@
         props: {value: Object},
         data() {
             return {
-                site: this.value
             }
         },
     }
