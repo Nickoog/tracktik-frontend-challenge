@@ -1,11 +1,11 @@
 <template>
-    <router-link :to = "{ name:'infos', params: {id: value.id} }">
-        <div class="item-container d-flex justify-content-between align-items-center border p-3">
+    <router-link :to = "{ name:'infos', params: {id: value.id} }" class="bg-white">
+        <div class="item-container d-flex justify-content-between align-items-center border-top px-3 pt-2">
             <div class="left-section d-flex align-items-center">
                 <div class="image-wrapper">
                     <img :src="value.images[0]" alt="Avatar" class="rounded-circle"> 
                 </div>
-                <div class="info-container">
+                <div class="info-container ml-3">
                     <p>
                         <strong>{{ value.title }}</strong>
                     </p>
@@ -14,8 +14,7 @@
                         {{ value.address.city }} 
                         {{ value.address.state }}
                         {{ value.address.zipCode }}
-                    </p>
-                    <p> 
+                    <br> 
                         {{ value.address.city }}
                     </p>
                     <p> 
@@ -42,5 +41,5 @@
 </script>
 
 <style lang="scss">
-    @import '../style/site-item';
+    @import '../assets/style/site-item';
 </style>

@@ -17,7 +17,3 @@
         }
     }
 </script>
-
-<style lang="scss">
-    @import './style/vue';
-</style>

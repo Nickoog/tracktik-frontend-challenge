@@ -43,5 +43,5 @@
 </script>
 
 <style lang="scss">
-    @import '../style/modal';
+    @import '../assets/style/modal';
 </style>
