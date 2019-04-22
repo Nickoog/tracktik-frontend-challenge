@@ -1,0 +1,43 @@
+.sites {
+    h2 {
+        font-size: 20px;
+        color: white;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    .sort-container {
+        .select-wrapper {
+            max-width: 200px;
+            select {
+                border: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -o-appearance: none;
+            }
+              
+            select + i.fa {
+                float: right;
+                margin-top: -30px;
+                margin-right: 5px;
+                pointer-events: none;
+                background-color: #fff;
+                padding-right: 5px;
+            }
+        }
+    }
+    .search-wrapper {
+        transition: width 0.3s linear;
+        input {
+            width: 0px;
+            border: none;
+            transition: width 0.3s linear;
+        }
+    }
+    .active {
+        input {
+            width: 175px;
+            border-bottom: 1px solid lightgray;
+            transition: width 0.3s linear;
+        }
+    }
+}

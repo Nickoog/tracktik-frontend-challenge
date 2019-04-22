@@ -1,16 +1,19 @@
 <template>
     <div id="app">
-        <h3>{{title}}</h3>
+        <Header />
+        <router-view></router-view>
     </div>
 </template> 
 
 <script>
+    import Header from './components/Header.vue';
+    import Sites from './components/Sites.vue';
+
     export default {
         name: 'app',
-        data() {
-            return {
-                title: 'Tiny app'
-            }
+        components: {
+            Header,
+            Sites
         }
     }
 </script>
