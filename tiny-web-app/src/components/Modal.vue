@@ -9,7 +9,7 @@
                     <h1 class="m-0">My profile</h1>
                     <button
                         type="button"
-                        class="btn-close"
+                        class="btn btn-close"
                         @click="close"
                     >
                         <i class="fa fa-times-circle" aria-hidden="true"></i>
