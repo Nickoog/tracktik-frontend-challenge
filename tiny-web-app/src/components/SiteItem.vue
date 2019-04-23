@@ -1,5 +1,5 @@
 <template>
-    <router-link :to = "{ name:'infos', params: {id: value.id} }" class="bg-white">
+    <router-link :to = "{ name:'infos', params: {id: value.id} }" class="item-link">
         <div class="item-container d-flex justify-content-between align-items-center border-top px-3 pt-2">
             <div class="left-section d-flex align-items-center">
                 <div class="image-wrapper">

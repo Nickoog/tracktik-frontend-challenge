@@ -17,7 +17,10 @@
         <Modal
             v-show="isModalVisible"
             @close="closeModal"
-            :value = "profil"
+            @edit="editProfil"
+            @success="toggleSuccess"
+            :value="profil"
+            :success="success"
         />
     </header>
 </template>
@@ -34,6 +37,7 @@
                 title: 'Scheduling',
                 profil: {},
                 isModalVisible: false,
+                success: false
             }
         },
         methods: {
@@ -44,11 +48,29 @@
                 .then(res => res.json())
                 .then(json => this.profil = json)
             },
+            editProfil () {
+                fetch('https://tracktik-frontend-challenge-jwidtarfww.now.sh/me',{
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(this.profil)
+                })
+                .then(res => {
+                    console.log(res.status);
+                    res.status === 201?
+                    this.success = true
+                    : this.success = false
+                })
+            },
             showModal() {
                 this.isModalVisible = true;
             },
             closeModal() {
                 this.isModalVisible = false;
+            },
+            toggleSuccess () {
+                this.success = false;
             }
         },
         created() {
