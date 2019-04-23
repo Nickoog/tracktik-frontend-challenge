@@ -1,28 +1,37 @@
-.item-container {
-    transition: transform 0.3s linear;
-    .left-section {
-        .image-wrapper {
-            width: 50px;
-            height: 50px;
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
-        .info-container {
-            p {
-                font-size: 12px;
-                color: black; 
-            }
-            strong {
-                font-size: 14px;
-            }
-        }
-    }
-    .fa {
-        color: black;
-    }
+.item-link {
     &:hover {
         text-decoration: none;
+        .item-container {
+            transition: all 0.3s linear;
+            background-color: #FAFAFA;
+        }
+    }
+    .item-container {
+        transition: transform 0.3s linear;
+        .left-section {
+            .image-wrapper {
+                width: 50px;
+                height: 50px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .info-container {
+                p {
+                    font-size: 12px;
+                    color: black; 
+                }
+                strong {
+                    font-size: 14px;
+                }
+            }
+        }
+        .fa {
+            color: black;
+        }
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
