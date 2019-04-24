@@ -75,7 +75,7 @@
         },
         created() {
             this.getProfil()
-        },
+        }
     }
 </script>
 
